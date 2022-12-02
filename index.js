@@ -14,17 +14,6 @@ const db = mongoose.connection;
 db.on("error", (error) => console.log(error));
 db.once("open", () => console.log("connected"));
 
-// const { MongoClient } = require('mongodb');
-// const uri = "mongodb+srv://srms:Projectsrms@2022@cluster0.owobpsm.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-//   client.close();
-// });
-
-
-
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 app.use(expressLayouts);
